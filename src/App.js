@@ -1,25 +1,99 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route, useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
+import Homepage from "./components/Homepage";
+import Products from "./components/Products";
+import Cart from "./components/Cart";
+import Checkout from "./components/Checkout";
+import NavBar from "./components/NavBar";
+import NotFound from "./components/NotFound";
+import "./App.css";
 
-function App() {
+export default function App() {
+  const location = useLocation();
+
+  let storage;
+  if (localStorage.getItem("cart")) {
+    storage = JSON.parse(localStorage.getItem("cart"));
+  } else {
+    storage = [];
+  }
+  const [cart, setCart] = useState(storage);
+  const [quantity, setQuantity] = useState(0);
+  const [amount, setAmount] = useState(0);
+
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
+
+  useEffect(updateQuantityAndAmount, [cart]);
+
+  function updateQuantityAndAmount() {
+    let quantity = 0;
+    let amount = 0;
+    for (let cartItem of cart) {
+      quantity += Number(cartItem.quantity);
+      amount += Number(cartItem.item.price) * Number(cartItem.quantity);
+    }
+    setQuantity(quantity);
+    setAmount(amount);
+  }
+
+  function addToCart(product) {
+    let newCart = [...cart];
+    for (let cartItem of newCart) {
+      if (cartItem.item.id === product.id) {
+        cartItem.quantity += 1;
+        setCart(newCart);
+        return;
+      }
+    }
+    newCart = [...cart, { item: product, quantity: 1 }];
+    setCart(newCart);
+  }
+
+  function updateCart(id, quantity) {
+    if (quantity) {
+      const newCart = [...cart];
+      for (let cartItem of newCart) {
+        if (cartItem.item.id === id) {
+          cartItem.quantity = quantity;
+          break;
+        }
+      }
+      setCart(newCart);
+    } else {
+      const newCart = cart.filter((cartItem) => cartItem.item.id !== id);
+      setCart(newCart);
+    }
+  }
+
+  function resetCart() {
+    setCart([]);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={location.pathname === "/" ? "App home" : "App"}>
+      <NavBar number={quantity} amount={amount} />
+      <div className="main">
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route
+            path="/products"
+            element={<Products addToCart={addToCart} />}
+          />
+          <Route
+            path="/cart"
+            element={
+              <Cart cart={cart} amount={amount} updateCart={updateCart} />
+            }
+          />
+          <Route
+            path="/checkout"
+            element={<Checkout resetCart={resetCart} />}
+          />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </div>
     </div>
   );
 }
-
-export default App;

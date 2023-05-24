@@ -1,5 +1,5 @@
 {
-  "name": "shop-app",
+  "name": "shop",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://bogdanblare.github.io/shop-app",
@@ -9,6 +9,8 @@
     "@testing-library/user-event": "^13.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hooks": "^1.0.1",
+    "react-router-dom": "^6.11.1",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
@@ -39,6 +41,18 @@
     ]
   },
   "devDependencies": {
+    "eslint-plugin-react-hooks": "^4.6.0",
     "gh-pages": "^5.0.0"
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bogdanblare/shop.git"
+  },
+  "author": "bogdanblare",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bogdanblare/shop/issues"
   }
 }
