@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "https://bogdanblare.github.io/Shop-app/static/css/main.f002f16b.css",
+    "main.js": "https://bogdanblare.github.io/Shop-app/static/js/main.4e3897e8.js",
+    "static/media/images03.webp": "https://bogdanblare.github.io/Shop-app/static/media/images03.c529d53c1476d5b8a856.webp",
+    "static/media/images18.webp": "https://bogdanblare.github.io/Shop-app/static/media/images18.08fa940987c58f8a1605.webp",
+    "static/media/images15.webp": "https://bogdanblare.github.io/Shop-app/static/media/images15.e82236d9a88e9c152483.webp",
+    "static/media/images19.webp": "https://bogdanblare.github.io/Shop-app/static/media/images19.3304059325221ae6a003.webp",
+    "static/media/images17.webp": "https://bogdanblare.github.io/Shop-app/static/media/images17.31e05ada5d4bce6346b7.webp",
+    "static/media/images11.webp": "https://bogdanblare.github.io/Shop-app/static/media/images11.92ae1a4cad4696bb6866.webp",
+    "static/media/images02.webp": "https://bogdanblare.github.io/Shop-app/static/media/images02.3912e2fd02b02a007f74.webp",
+    "static/media/images01.webp": "https://bogdanblare.github.io/Shop-app/static/media/images01.54bd4f4ea33614655b27.webp",
+    "static/media/images08.webp": "https://bogdanblare.github.io/Shop-app/static/media/images08.1deff1af4e62760bdc72.webp",
+    "static/media/images07.webp": "https://bogdanblare.github.io/Shop-app/static/media/images07.d6df31b378b839797c21.webp",
+    "static/media/images06.webp": "https://bogdanblare.github.io/Shop-app/static/media/images06.124761563755a52250fc.webp",
+    "static/media/images16.webp": "https://bogdanblare.github.io/Shop-app/static/media/images16.5673c1f6692b8ddd9272.webp",
+    "static/media/images09.webp": "https://bogdanblare.github.io/Shop-app/static/media/images09.8bb724ea8ccbf63b2116.webp",
+    "static/media/images05.webp": "https://bogdanblare.github.io/Shop-app/static/media/images05.f2caca58157a491d5831.webp",
+    "static/media/images04.webp": "https://bogdanblare.github.io/Shop-app/static/media/images04.d517b7471760f8e51d9c.webp",
+    "static/media/images14.webp": "https://bogdanblare.github.io/Shop-app/static/media/images14.fd199de9bfb9bf42c078.webp",
+    "static/media/images10.webp": "https://bogdanblare.github.io/Shop-app/static/media/images10.0422b25fd96c31b86620.webp",
+    "static/media/9GAG_Flat_lay_1296x.webp": "https://bogdanblare.github.io/Shop-app/static/media/9GAG_Flat_lay_1296x.67dbc12d0dae007aff4a.webp",
+    "index.html": "https://bogdanblare.github.io/Shop-app/index.html",
+    "main.f002f16b.css.map": "https://bogdanblare.github.io/Shop-app/static/css/main.f002f16b.css.map",
+    "main.4e3897e8.js.map": "https://bogdanblare.github.io/Shop-app/static/js/main.4e3897e8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f002f16b.css",
+    "static/js/main.4e3897e8.js"
+  ]
+}
